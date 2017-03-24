@@ -1,28 +1,35 @@
 <h1>New Race</h1>
+
 <%= form_for :event, url: events_path do |f| %>
   <p>
-    <%= f.label :name %>: <%= f.text_field :name %>
+    <%= f.label :name %> <%= f.text_field :name %>
   </p>
+
   <p>
   <!-- TODO make 2 fields, one for date, one for time -->
-    <%= f.label :event_at %>: <%= f.datetime_local_field :event_at, :value => DateTime.now.strftime("%d/%m/%Y %I:%M%p") %>
+    <%= f.label :event_at %>: <%= f.datetime_local_field :event_at, value: DateTime.now.strftime("%d/%m/%Y %I:%M%p") %>
   </p>
+
   <p>
   <!-- TODO dropdown with Road/Trail options -->
     <%= f.label :event_type %>: <%= f.text_field :event_type %>
   </p>
+
   <p>
   <!-- TODO validate for number -->
     <%= f.label :distance %>: <%= f.text_field :distance %>
   </p>
+
   <p>
   <!-- TODO validate for url if present -->
     <%= f.label :url %>: <%= f.text_field :url %>
   </p>
+
   <p>
     <%= f.label :notes %>: <%= f.text_area :notes %>
   </p>
+
   <p>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-default"%>
   </p>
 <% end %>

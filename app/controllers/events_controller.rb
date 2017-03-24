@@ -1,9 +1,9 @@
 class EventsController < ApplicationController
   def index
+    @events = Event.all
   end
 
   def create
-    # render plain: params[:event].inspect
     @event = Event.new(event_params)
 
     @event.save

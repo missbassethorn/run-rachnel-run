@@ -1,2 +1,22 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+
+<h1>Races entered</h1>
+ 
+<table class="table">
+  <tr>
+    <th>Race</th>
+    <th>Race type</th>
+    <th>Distance(km)</th>
+    <th>Months until</th>
+    <th>Days until</th>
+  </tr>
+
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.name %></td>
+      <td><%= event.event_type %></td>
+      <td><%= event.distance %></td>
+      <td><%= event.months_to_go %></td>
+      <td><%= event.days_to_go %> </td>
+    </tr>
+  <% end %>
+</table>
