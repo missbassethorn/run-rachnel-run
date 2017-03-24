@@ -12,12 +12,12 @@
 
   <p>
   <!-- TODO dropdown with Road/Trail options -->
-    <%= f.label :event_type %>: <%= f.text_field :event_type %>
+    <%= f.label :event_type %>: <%= f.select :event_type, ["Road", "Trail"]%>
   </p>
 
   <p>
   <!-- TODO validate for number -->
-    <%= f.label :distance %>: <%= f.text_field :distance %>
+    <%= f.label :distance %>(km): <%= f.text_field :distance %>
   </p>
 
   <p>
